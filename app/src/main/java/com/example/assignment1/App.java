@@ -1,7 +1,9 @@
 package com.example.assignment1;
 
 import android.app.Application;
+import android.content.SharedPreferences;
 
+import com.example.assignment1.Utilities.SharePreferencesManager;
 import com.example.assignment1.Utilities.SignalManager;
 
 public class App extends Application {
@@ -9,5 +11,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         SignalManager.init(this);
+        SharePreferencesManager.init(this);
     }
 }

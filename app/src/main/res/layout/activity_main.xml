@@ -5,8 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/five_lane_road"
     tools:context=".MainActivity">
 
+    <!-- background -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/main_IMG_background"
         android:layout_width="match_parent"
@@ -52,38 +54,72 @@
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
+    <!-- score title-->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/main_LBL_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:textSize="@dimen/score_size"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        />
+
     <!--biker linear (row 3)-->
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/main_row3_and_bikers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@id/main_buttons_linear">
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/main_IMG_biker1"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="35dp"
+        android:layout_width="@dimen/biker_dimension"
+        android:layout_height="@dimen/biker_dimension"
+        android:layout_above="@id/main_buttons_linear"
+        android:layout_marginStart="45dp"
         app:srcCompat="@drawable/bikerpng" />
-
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_biker2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginHorizontal="20dp"
+            android:layout_width="@dimen/biker_dimension"
+            android:layout_height="@dimen/biker_dimension"
+            android:layout_above="@id/main_buttons_linear"
+            android:layout_marginStart="105dp"
             app:srcCompat="@drawable/bikerpng" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_biker3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="5dp"
+            android:layout_width="@dimen/biker_dimension"
+            android:layout_height="@dimen/biker_dimension"
+            android:layout_above="@id/main_buttons_linear"
+            android:layout_marginStart="170dp"
             app:srcCompat="@drawable/bikerpng" />
 
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_biker4"
+            android:layout_width="@dimen/biker_dimension"
+            android:layout_height="@dimen/biker_dimension"
+            android:layout_above="@id/main_buttons_linear"
+            android:layout_marginStart="235dp"
+            app:srcCompat="@drawable/bikerpng" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_biker5"
+            android:layout_width="@dimen/biker_dimension"
+            android:layout_height="@dimen/biker_dimension"
+            android:layout_above="@id/main_buttons_linear"
+            android:layout_marginStart="295dp"
+            app:srcCompat="@drawable/bikerpng" />
+
 
 
     <!--buttons linear layout -->
@@ -128,10 +164,10 @@
 
 
 
-    <!--col 0-->
+    <!--col 0 poos-->
     <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/main_col0"
-        android:layout_width="70dp"
+        android:id="@+id/main_col0_poos"
+        android:layout_width="35dp"
         android:layout_height="600dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="60dp"
@@ -148,44 +184,29 @@
             app:srcCompat="@drawable/poo" />
 
         <androidx.appcompat.widget.AppCompatImageView
-
             android:id="@+id/main_IMG_poo2"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
-            android:layout_marginVertical="10dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
 
         <androidx.appcompat.widget.AppCompatImageView
-
             android:id="@+id/main_IMG_poo3"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
+            android:layout_marginVertical="10dp"
             app:srcCompat="@drawable/poo" />
-        <androidx.appcompat.widget.AppCompatImageView
 
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_poo4"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <!--col 1-->
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/main_col1"
-        android:layout_width="70dp"
-        android:layout_height="600dp"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="60dp"
-        android:layout_below="@+id/main_hearts"
-        android:layout_centerInParent="true"
-        android:layout_above="@id/main_buttons_linear">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_poo5"
@@ -194,47 +215,42 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 1 poos-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col1_poos"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_marginStart="120dp"
+        android:layout_above="@id/main_buttons_linear">
 
         <androidx.appcompat.widget.AppCompatImageView
-
             android:id="@+id/main_IMG_poo6"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
-            android:layout_marginVertical="10dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
 
         <androidx.appcompat.widget.AppCompatImageView
-
             android:id="@+id/main_IMG_poo7"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
-        <androidx.appcompat.widget.AppCompatImageView
 
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_poo8"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
-
-     </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <!--col 2-->
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/main_col2"
-        android:layout_width="70dp"
-        android:layout_height="600dp"
-        android:orientation="vertical"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="40dp"
-        android:layout_below="@+id/main_hearts"
-        android:layout_above="@id/main_buttons_linear">
-
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/main_IMG_poo9"
@@ -243,10 +259,44 @@
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo10"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+     </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 2 poos = middle column-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col2_poos"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/main_buttons_linear">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo11"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
 
-            android:id="@+id/main_IMG_poo10"
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo12"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo13"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_marginVertical="10dp"
@@ -255,22 +305,381 @@
             app:srcCompat="@drawable/poo" />
 
         <androidx.appcompat.widget.AppCompatImageView
-
-            android:id="@+id/main_IMG_poo11"
+            android:id="@+id/main_IMG_poo14"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo15"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
-            android:id="@+id/main_IMG_poo12"
+    <!--col 3 poos-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col3_poos"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_marginStart="250dp"
+        android:layout_above="@id/main_buttons_linear">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo16"
             android:layout_width="@dimen/poo_width"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/poo" />
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo17"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo18"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo19"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo20"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 4 poos-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col4_poos"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="65dp"
+        android:layout_below="@+id/main_hearts"
+        android:layout_above="@id/main_buttons_linear">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo21"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo22"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo23"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_marginVertical="10dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo24"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_poo25"
+            android:layout_width="@dimen/poo_width"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/poo" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 0 hamburgers-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col0_hamburgers"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="60dp"
+        android:layout_below="@+id/main_hearts"
+        android:layout_above="@id/main_buttons_linear"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger1"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger2"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger3"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger4"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger5"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 1 hamburgers-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col1_hamburgers"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_marginStart="120dp"
+        android:layout_above="@id/main_buttons_linear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger6"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger7"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger8"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger9"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger10"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 2 hamburgers = middle column-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col2_hamburgers"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/main_buttons_linear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger11"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger12"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger13"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger14"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger15"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 3 hamburgers-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col3_hamburgers"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/main_hearts"
+        android:layout_marginStart="250dp"
+        android:layout_above="@id/main_buttons_linear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger16"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger17"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger18"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger19"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger20"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!--col 4 hamburgers-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/main_col4_hamburgers"
+        android:layout_width="35dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="65dp"
+        android:layout_below="@+id/main_hearts"
+        android:layout_above="@id/main_buttons_linear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger21"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger22"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger23"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger24"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/main_IMG_hamburger25"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/hamburger" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

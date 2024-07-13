@@ -34,11 +34,21 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.play.services.location)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
     //Glide
     implementation(libs.glide)
+
+    //Switch button
+    implementation (libs.google.material.v150)
+
+    //Google maps
+    implementation (libs.play.services.maps)
+
+    //Gson
+    implementation(libs.gson)
 }
 

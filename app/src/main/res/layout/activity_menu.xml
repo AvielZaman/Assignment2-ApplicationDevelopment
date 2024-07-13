@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_background"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/menu_LBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MENU"
+        android:textSize="@dimen/menu_title_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/menu_sensorButtons_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONTROLS"
+            android:textColor="@color/white"
+            android:checked="false"
+            android:textOff="Buttons"
+            android:textOn="Sensors"
+            app:showText="true"
+            app:switchTextAppearance="@style/SwitchTextAppearance"
+            app:thumbTint="@color/green_300"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:switchPadding="8dp"
+            android:layout_centerInParent="true"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/menu_slowFast_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MODE"
+            android:textColor="@color/white"
+            android:checked="false"
+            android:textOff="Slow"
+            android:textOn="Fast"
+            app:showText="true"
+            app:switchTextAppearance="@style/SwitchTextAppearance"
+            app:thumbTint="@color/green_300"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:switchPadding="42dp"
+            android:layout_below="@id/menu_sensorButtons_switch"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_EnterGame_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="START GAME"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_above="@id/menu_SCORES_TABLE_BTN"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/BTN_dimension"
+        android:backgroundTint="@color/green_300"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_SCORES_TABLE_BTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TO SCORES TABLE"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/BTN_dimension"
+        android:backgroundTint="@color/green_300"/>
+
+</RelativeLayout>
